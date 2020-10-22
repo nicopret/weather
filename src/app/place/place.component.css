@@ -1,0 +1,15 @@
+
+GridLayout {
+    padding: 0 4;
+}
+
+.date {
+    font-size: 20;
+    padding-top: 14;
+    text-align: right;
+}
+
+.place {
+    font-size: 30;
+    font-weight: bold;
+}

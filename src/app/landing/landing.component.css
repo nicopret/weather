@@ -1,0 +1,9 @@
+
+FlexboxLayout {
+    align-items: center;
+    justify-content: center;
+}
+
+StackLayout {
+    margin-top: 20;
+}

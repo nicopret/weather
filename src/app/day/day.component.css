@@ -1,0 +1,14 @@
+
+Image {
+    height: 46;
+    margin-right: 8;
+}
+
+Label {
+    font-size: 18;
+    margin-top: 24;
+}
+
+.grid {
+    padding: 0 30;
+}

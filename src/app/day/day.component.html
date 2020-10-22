@@ -1,0 +1,14 @@
+
+<GridLayout *ngIf="data" columns="*, *" height="80" class="grid">
+
+    <GridLayout columns="auto, *" col="0">
+        <Image src="~/images/sunrise.png" col="0"></Image>
+        <Label [text]="data.sunrise" col="1"></Label>
+    </GridLayout>
+    
+    <GridLayout columns="auto, *" col="1">
+        <Image src="~/images/sunset.png" col="0"></Image>
+        <Label [text]="data.sunset" col="1"></Label>
+    </GridLayout>
+
+</GridLayout>

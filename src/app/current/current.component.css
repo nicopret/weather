@@ -1,0 +1,16 @@
+
+.main {
+    font-size: 32;
+    padding-top: 4;
+}
+
+.sub {
+    font-size: 14;
+    margin-bottom: 8;
+    padding-bottom: 4;
+}
+
+.text {
+    font-size: 16;
+    padding: 4 0;
+}

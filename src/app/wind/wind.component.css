@@ -1,0 +1,11 @@
+
+Image {
+    height: 64;
+    margin-right: 8;
+}
+
+Label {
+    font-size: 24;
+    font-weight: bold;
+    padding-top: 14;
+}

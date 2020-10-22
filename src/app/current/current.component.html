@@ -1,0 +1,14 @@
+
+<GridLayout *ngIf="data" columns="*, *" height="160">
+    <GridLayout>
+        <Image [src]="icon" col="0" verticalAlignment="middle"></Image>        
+    </GridLayout>
+    <StackLayout col="1">
+        <GridLayout rows="*, auto" height="80">
+            <Label class="main" [text]="temperature" row="0"></Label>
+            <Label class="sub" [text]="feelsLike" row="1"></Label>
+        </GridLayout>
+        <Label class="text" [text]="minimum" height="40"></Label>
+        <Label class="text" [text]="maximum" height="40"></Label>
+    </StackLayout>
+</GridLayout>
