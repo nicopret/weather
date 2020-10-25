@@ -1,23 +1,25 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "target": "es5",
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "noEmitHelpers": true,
-      "noEmitOnError": true,
-      "skipLibCheck": true,
-      "lib": [
-          "es2017",
-          "dom",
-          "es6"
-      ],
-      "baseUrl": ".",
-      "paths": {
-          "~/*": [
-              "app/*"
-          ]
-      }
+    "module": "esnext",
+    "target": "es2017",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitHelpers": true,
+    "noEmitOnError": true,
+    "skipLibCheck": true,
+    "lib": [
+      "es2017",
+      "dom",
+      "es6"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "app/*"
+      ]
+    },
+    "moduleResolution": "node",
+    "removeComments": false
   },
   "include": [
     "references.d.ts",
@@ -27,8 +29,8 @@
     "./src/main.ts"
   ],
   "exclude": [
-      "node_modules",
-      "platforms",
-      "e2e"
+    "node_modules",
+    "platforms",
+    "e2e"
   ]
 }

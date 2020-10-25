@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Page } from 'tns-core-modules/ui/page';
+import { Page } from '@nativescript/core/ui/page';
 
 import * as geolocation from 'nativescript-geolocation';
-import { Accuracy } from 'tns-core-modules/ui/enums';
+import { Accuracy } from '@nativescript/core/ui/enums';
 
 import { ApiService } from '../api/api.service';
 import { Formatters } from '../util/formatters'

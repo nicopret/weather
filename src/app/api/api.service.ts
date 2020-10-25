@@ -1,9 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import {} from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { Observable } from 'tns-core-modules/ui/page';
+import { Observable } from '@nativescript/core/data/observable';
 
 import { Config } from './config';
 
