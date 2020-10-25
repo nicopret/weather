@@ -17,7 +17,7 @@ export class CurrentComponent implements OnChanges {
     ngOnChanges() {
         if (this.data) {
             this.feelsLike = `Feels like ${this.data.main.feels_like} °C`
-            this.icon = `./images/${this.data.weather[0].icon}.png`;
+            this.icon = `res://icon_${this.data.weather[0].icon}`;
             this.maximum = `Max: ${this.data.main.temp_max} °C`;
             this.minimum = `Min: ${this.data.main.temp_min} °C`;
             this.temperature = `${this.data.main.temp} °C`
