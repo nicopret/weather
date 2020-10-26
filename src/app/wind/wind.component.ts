@@ -1,4 +1,6 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { ApiService } from '../api/api.service';
 
 const windSpeedTypes = [
     { color: '#ffffff', min: 0, type: 'Calm' },
@@ -21,15 +23,20 @@ const windSpeedTypes = [
     styleUrls: [ './wind.component.css' ],
     templateUrl: './wind.component.html'
 })
-export class WindComponent implements OnChanges {
-    @Input() data;
+export class WindComponent implements OnInit {
 
     color;
     speed;
 
-    ngOnChanges () {
-        const windType = windSpeedTypes.reduce((type, item) => this.data >= item.min ? item : type, windSpeedTypes[0]);
-        this.color = windType.color;
-        this.speed = `${windType.type}: ${Number(this.data * 3.6).toFixed(1)} km/h`;
+    constructor(private apiService: ApiService) {}
+
+    ngOnInit() {
+        this.apiService.currentWeather.subscribe((value) => {
+            const wind = value.wind.speed;
+            const windType = windSpeedTypes.reduce((type, item) => wind >= item.min ? item : type, windSpeedTypes[0]);
+            this.color = windType.color;
+            this.speed = `${windType.type}: ${Number(wind * 3.6).toFixed(1)} km/h`;
+            });
     }
+
 }

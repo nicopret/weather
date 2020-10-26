@@ -7,11 +7,11 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { CurrentComponent } from './current/current.component';
 import { DayComponent } from './day/day.component';
+import { HourlyComponent } from './hourly/hourly.component';
 import { ImageLabelComponent } from './imageLabel/imageLabel.component';
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { LandingComponent } from './landing/landing.component';
-import { LineGraphComponent } from './lineGraph/lineGraph.component';
 import { PlaceComponent } from './place/place.component';
 import { WindComponent } from './wind/wind.component';
 
@@ -35,11 +35,11 @@ import { WindComponent } from './wind/wind.component';
         AppComponent,
         CurrentComponent,
         DayComponent,
+        HourlyComponent,
         ImageLabelComponent,
         ItemsComponent,
         ItemDetailComponent,
         LandingComponent,
-        LineGraphComponent,
         PlaceComponent,
         WindComponent
     ],
