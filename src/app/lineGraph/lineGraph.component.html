@@ -1,0 +1,20 @@
+
+<StackLayout>
+    <RadCartesianChart tkExampleTitle tkToggleNavButton height="100">
+        <CategoricalAxis tkCartesianHorizontalAxis>
+        </CategoricalAxis>
+        <LinearAxis tkCartesianVerticalAxis
+            horizontalLocation="left"
+            lineHidden="true"
+            labelFormat="%.0f"
+            majorStep="4"
+            ticksHidden="true">
+        </LinearAxis>
+        <AreaSeries tkCartesianSeries
+            categoryProperty="time"
+            valueProperty="temp"
+            [items]="source"
+            [legendTitle]="data.label">
+        </AreaSeries>
+    </RadCartesianChart>
+</StackLayout>

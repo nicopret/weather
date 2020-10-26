@@ -9,6 +9,11 @@ export class Formatters {
         }).format(new Date(input));
     }
 
+    hourFormatter = (input: number) => {
+        const date = new Date(input);
+        return date.getHours();
+    }
+
     timeFormatter = (input: number) => {
         return new Intl.DateTimeFormat('en-GB', {
             hour: 'numeric',

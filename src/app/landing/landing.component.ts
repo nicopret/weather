@@ -20,6 +20,7 @@ export class LandingComponent implements OnInit {
     currentLocation: any = {};
     currentWeather: any;
     currentWindSpeed: number;
+    hourly: any = {};
 
     constructor(private apiService: ApiService, private formatter: Formatters, private page: Page) {
         this.page.actionBarHidden = true;
@@ -67,6 +68,19 @@ export class LandingComponent implements OnInit {
             };
             this.currentWindSpeed = speed;
             this.currentWeather = { weather, main };
+        }
+        const onecall: any = await this.apiService.onecall(latitude, longitude);
+        if (onecall) {
+            this.hourly.label = "Hourly";
+            this.hourly.series = onecall.hourly.map((item) => {
+                const {dt, temp, feels_like, wind_speed} = item;
+                const rain = item.rain && item.rain['1h'] ? item.rain['1h'] : 0;
+                const snow = item.snow && item.snow['1h'] ? item.snow['1h'] : 0;
+                return {
+                    feels_like, rain, snow, temp,
+                    time: this.formatter.hourFormatter(dt * 1000), wind_speed
+                }
+            });
         }
     }
 
