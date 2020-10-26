@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "@nativescript/angular";
+import { NativeScriptUIChartModule } from 'nativescript-ui-chart/angular';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -10,6 +11,7 @@ import { ImageLabelComponent } from './imageLabel/imageLabel.component';
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { LandingComponent } from './landing/landing.component';
+import { LineGraphComponent } from './lineGraph/lineGraph.component';
 import { PlaceComponent } from './place/place.component';
 import { WindComponent } from './wind/wind.component';
 
@@ -26,7 +28,8 @@ import { WindComponent } from './wind/wind.component';
     imports: [
         AppRoutingModule,
         HttpClientModule,
-        NativeScriptModule
+        NativeScriptModule,
+        NativeScriptUIChartModule
     ],
     declarations: [
         AppComponent,
@@ -36,6 +39,7 @@ import { WindComponent } from './wind/wind.component';
         ItemsComponent,
         ItemDetailComponent,
         LandingComponent,
+        LineGraphComponent,
         PlaceComponent,
         WindComponent
     ],

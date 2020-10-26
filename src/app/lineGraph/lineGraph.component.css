@@ -1,0 +1,17 @@
+
+AreaSeries {
+    fill-color: #FED2B9;
+    stroke-color: #FE6A16;
+    stroke-width: 4;
+}
+
+BarSeries {
+    fill-color: #94E2FF;
+    stroke-color: #0082B3;
+    stroke-width: 2;
+}
+
+LineSeries {
+    stroke-color: #C70039;
+    stroke-width: 3;
+}
