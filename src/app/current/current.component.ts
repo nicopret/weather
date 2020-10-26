@@ -1,12 +1,13 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+import { ApiService } from '../api/api.service';
 
 @Component({
     selector: 'tns-current',
     styleUrls: [ './current.component.css' ],
     templateUrl: './current.component.html'
 })
-export class CurrentComponent implements OnChanges {
-    @Input() data: any;
+export class CurrentComponent implements OnInit {
 
     feelsLike;
     icon;
@@ -14,13 +15,16 @@ export class CurrentComponent implements OnChanges {
     minimum;
     temperature;
 
-    ngOnChanges() {
-        if (this.data) {
-            this.feelsLike = `Feels like ${this.data.main.feels_like} °C`
-            this.icon = `res://icon_${this.data.weather[0].icon}`;
-            this.maximum = `Max: ${this.data.main.temp_max} °C`;
-            this.minimum = `Min: ${this.data.main.temp_min} °C`;
-            this.temperature = `${this.data.main.temp} °C`
-        }
+    constructor(private apiService: ApiService) {}
+
+    ngOnInit() {
+        this.apiService.currentWeather.subscribe((value) => {
+            this.feelsLike = `Feels like ${value.main.feels_like} °C`
+            this.icon = `res://icon_${value.weather[0].icon}`;
+            this.maximum = `Max: ${value.main.temp_max} °C`;
+            this.minimum = `Min: ${value.main.temp_min} °C`;
+            this.temperature = `${value.main.temp} °C`
+        });
     }
+
 }

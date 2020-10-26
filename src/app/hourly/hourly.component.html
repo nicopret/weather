@@ -13,8 +13,12 @@
         <AreaSeries tkCartesianSeries
             categoryProperty="time"
             valueProperty="temp"
-            [items]="source"
-            [legendTitle]="data.label">
+            [items]="temperature">
         </AreaSeries>
+        <LineSeries tkCartesianSeries
+            categoryProperty="time"
+            valueProperty="feels"
+            [items]="temperature">
+        </LineSeries>
     </RadCartesianChart>
 </StackLayout>
