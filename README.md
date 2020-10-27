@@ -9,5 +9,3 @@ To install, run `npm install` and then upate the `src/app/api/config.ts` file wi
 `static API_KEY = 'appid=XXXX';` where XXXX is the api key.
 
 At this stage the nativescript preview is not working, there seems to be a bug with angular 10 & nativescript 7 that stops it from working, so you will have to install the emulators on your system. To run it, either use `npm run android` or `npm run ios`, depending on your emulator.
-
-The images is not loading, I'm working on it :)
