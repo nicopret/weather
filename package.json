@@ -3,6 +3,9 @@
   "license": "SEE LICENSE IN <your-license-filename>",
   "repository": "<fill-your-repository-here>",
   "scripts": {
+    "add-android": "ns platform add android",
+    "add-ios": "ns platform add ios",
+    "platform": "npm run add-android && npm run add-ios",
     "clean": "npx rimraf hooks node_modules package-lock.json platforms",
     "ng": "ng",
     "start": "ng serve",
@@ -28,6 +31,7 @@
     "@angular/router": "~10.1.0",
     "@nativescript/angular": "~10.1.0",
     "@nativescript/core": "~7.0.0",
+    "@nativescript/geolocation": "^7.0.0",
     "@nativescript/theme": "~3.0.0",
     "@nativescript/webpack": "3.0.0",
     "@schematics/angular": "^10.2.0",
