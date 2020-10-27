@@ -4,6 +4,7 @@ import { ApiService } from '../api/api.service';
 import { Formatters } from '../util/formatters';
 
 @Component({
+    providers: [ Formatters ],
     selector: 'tns-day',
     styleUrls: [ './day.component.css' ],
     templateUrl: './day.component.html'

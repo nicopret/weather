@@ -8,10 +8,9 @@ import * as iosLocation from '@nativescript/geolocation';
 import { Accuracy } from '@nativescript/core/ui/enums';
 
 import { ApiService } from '../api/api.service';
-import { Formatters } from '../util/formatters'
 
 @Component({
-    providers: [ ApiService, Formatters ],
+    providers: [ ApiService ],
     selector: 'tns-landing',
     styleUrls: [ './landing.component.css' ],
     templateUrl: './landing.component.html'
@@ -25,7 +24,7 @@ export class LandingComponent implements OnInit {
 
     show: boolean = false;
     
-    constructor(private apiService: ApiService, private formatter: Formatters, private page: Page) {
+    constructor(private apiService: ApiService, private page: Page) {
         this.page.actionBarHidden = true;
     }
 

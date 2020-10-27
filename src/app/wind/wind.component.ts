@@ -36,7 +36,7 @@ export class WindComponent implements OnInit {
             const windType = windSpeedTypes.reduce((type, item) => wind >= item.min ? item : type, windSpeedTypes[0]);
             this.color = windType.color;
             this.speed = `${windType.type}: ${Number(wind * 3.6).toFixed(1)} km/h`;
-            });
+        });
     }
 
 }

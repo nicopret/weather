@@ -6,12 +6,24 @@ AreaSeries {
 }
 
 BarSeries {
-    fill-color: #94E2FF;
-    stroke-color: #0082B3;
     stroke-width: 2;
 }
 
+Label {
+    font-size: 16;
+    font-weight: bold;
+    margin-left: 4;
+    margin-top: 4;
+}
+
 LineSeries {
-    stroke-color: #C70039;
     stroke-width: 3;
+}
+
+StackLayout {
+    margin-bottom: 12;
+}
+
+.darkColor {
+    color: #00036B;
 }

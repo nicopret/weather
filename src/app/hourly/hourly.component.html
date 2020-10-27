@@ -1,24 +1,61 @@
 
 <StackLayout>
+    <StackLayout backgroundColor="#f1f1f1">
+        <Label class="darkColor" text="Hourly temperature forecast"></Label>
+        <RadCartesianChart tkExampleTitle tkToggleNavButton height="100">
+            <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
+            <LinearAxis tkCartesianVerticalAxis
+                horizontalLocation="left"
+                lineHidden="true"
+                labelFormat="%.0f"
+                majorStep="4"
+                ticksHidden="true">
+            </LinearAxis>
+            <AreaSeries tkCartesianSeries
+                categoryProperty="time"
+                legendTitle="Temperature"
+                valueProperty="temp"
+                [items]="temperature">
+            </AreaSeries>
+            <LineSeries tkCartesianSeries
+                categoryProperty="time"
+                legendTitle="Feels like"
+                strokeColor="#C70039";
+                valueProperty="feels"
+                [items]="temperature">
+            </LineSeries>
+        </RadCartesianChart>
+    </StackLayout>
+    <Label text="Wind and rain forecast"></Label>
     <RadCartesianChart tkExampleTitle tkToggleNavButton height="100">
-        <CategoricalAxis tkCartesianHorizontalAxis>
-        </CategoricalAxis>
+        <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
         <LinearAxis tkCartesianVerticalAxis
             horizontalLocation="left"
             lineHidden="true"
             labelFormat="%.0f"
-            majorStep="4"
+            majorStep="6"
+            minimum="0"
             ticksHidden="true">
         </LinearAxis>
-        <AreaSeries tkCartesianSeries
-            categoryProperty="time"
-            valueProperty="temp"
-            [items]="temperature">
-        </AreaSeries>
         <LineSeries tkCartesianSeries
             categoryProperty="time"
-            valueProperty="feels"
-            [items]="temperature">
+            strokeColor="#000000"
+            valueProperty="wind"
+            [items]="windCollection">
         </LineSeries>
+        <BarSeries tkCartesianSeries
+            categoryProperty="time"
+            fillColor="#94E2FF"
+            strokeColor="#0082B3"
+            valueProperty="rain"
+            [items]="windCollection">
+        </BarSeries>
+        <BarSeries tkCartesianSeries
+            categoryProperty="time"
+            fillColor="#787abd"
+            strokeColor="#0007ee"
+            valueProperty="snow"
+            [items]="windCollection">
+        </BarSeries>
     </RadCartesianChart>
 </StackLayout>

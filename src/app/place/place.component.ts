@@ -4,6 +4,7 @@ import { ApiService } from '../api/api.service';
 import { Formatters } from '../util/formatters';
 
 @Component({
+    providers: [ Formatters ],
     selector: 'tns-place',
     styleUrls: [ './place.component.css' ],
     templateUrl: './place.component.html'
